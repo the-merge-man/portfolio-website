@@ -1,58 +1,204 @@
-* {
+:root {
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --color-text: #1a1a1a;
+    --color-muted: #6b7280;
+    --color-border: #e5e7eb;
+    --space-1: 0.5rem;
+    --space-2: 1rem;
+    --space-3: 1.5rem;
+    --space-4: 2.5rem;
+    --space-5: 4rem;
+    --max-width: 720px;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
   body {
-    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    color: #1a1a1a;
-    line-height: 1.6;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    line-height: 1.65;
+    background: #ffffff;
+    -webkit-font-smoothing: antialiased;
   }
   
-  .hero {
-    min-height: 90vh;
+  /* Nav */
+  .site-nav {
     display: flex;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-3) var(--space-3);
+  }
+  
+  .brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: 0;
+    width: 100%;
+  }
+  
+  /* Home page */
+  .home {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-5) var(--space-3);
+  }
+  
+  .home-affiliation {
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--color-muted);
+    margin-bottom: var(--space-2);
+  }
+  
+  .links-row {
+    font-size: 0.85rem;
+    color: #000000;
+    margin-bottom: var(--space-4);
+  }
+  
+  .links-row a {
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .links-row a:hover {
+    color: var(--color-muted);
+    text-decoration: underline;
+  }
+  
+  .sep {
+    color: var(--color-muted);
+    margin: 0 0.4rem;
+  }
+  
+  .home-rule {
+    width: 32px;
+    height: 1px;
+    background: #000000;
+    margin: var(--space-4) 0;
+  }
+  
+  .about-heading {
+    font-family: var(--font-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: var(--space-2);
+  }
+  
+  .bio {
+    font-family: var(--font-main);
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    max-width: 60ch;
+    margin-bottom: var(--space-4);
+  }
+  
+  /* Footer */
+  footer {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--space-4) var(--space-3);
+    font-size: 0.85rem;
+    color: var(--color-muted);
+    border-top: 1px solid var(--color-border);
+  }
+  
+  /* Gate (index.html) — minimal, quiet, monochrome */
+  .gate {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #FEFBEA;
-    padding: 2rem;
+    padding: var(--space-3);
+    background: #ffffff;
   }
   
-  .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -1px;
+  .timer-line {
+    width: 100px;
+    height: 1px;
+    background: var(--color-border);
+    margin: 0 auto var(--space-4);
   }
   
-  .hero h2 {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: #4a5568;
-    margin-top: 0.5rem;
+  .timer-fill {
+    height: 100%;
+    width: 100%;
+    background: #d1d5db;
+    transition: width 0.1s linear, background-color 0.2s ease;
   }
   
-  .tagline {
-    margin-top: 1.5rem;
-    font-style: italic;
-    font-size: 1.1rem;
-    color: #718096;
-  }
-
-  .about {
-    padding: 5rem 2rem;
-    max-width: 700px;
-    margin: 0 auto;
+  .timer-fill.urgent {
+    background: #9ca3af;
   }
   
-  .about h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+  .gate-problem {
+    font-family: var(--font-main);
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    margin-bottom: var(--space-3);
+    color: #000000;
+    min-height: 1.2em;
   }
   
-  .about p {
-    margin-bottom: 1.2rem;
-    font-size: 1.05rem;
-    color: #2d2d2d;
+  .gate-form {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gate-input {
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    font-weight: 300;
+    padding: 0 0 0.3rem;
+    border: none;
+    border-bottom: 1px solid #d1d5db;
+    width: 56px;
+    text-align: center;
+    background: transparent;
+  }
+  
+  .gate-input:focus {
+    outline: none;
+    border-bottom-color: #000000;
+  }
+  
+  .gate-feedback {
+    margin-top: var(--space-3);
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    min-height: 1.2em;
+  }
+  
+  .gate-feedback.success {
+    color: #000000;
+  }
+  
+  .gate-feedback.error {
+    color: var(--color-muted);
   }

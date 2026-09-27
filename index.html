@@ -3,34 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jack — Portfolio</title>
+  <title>Jack Simon</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="site-header">
-    <h1 class="name">Jack</h1>
-    <p class="role">Student · Data &amp; Machine Learning Researcher</p>
-  </header>
-  <hr class="divider">
+  <main class="gate">
+    <div class="timer-line">
+      <div class="timer-fill" id="timer-fill"></div>
+    </div>
 
-  <main>
-    <section class="about" id="about">
-      <div class="about-content">
-        <h2>Hey!</h2>
-        <p>
-          I'm Jack, a student researcher who enjoys data and finding patterns either explicitly or implicitly
-          by teaching computers to do it for me 🙃
-          I also enjoy spending time with my community and nature. Please connect, I am happy to chat about research
-          or whatever you'd like.
-        </p>
-      </div>
-    </section>
+    <p class="gate-problem" id="gate-problem">&nbsp;</p>
+
+    <form id="gate-form" class="gate-form" autocomplete="off">
+      <input type="text" id="gate-answer" class="gate-input" inputmode="numeric" autofocus>
+    </form>
+
+    <p class="gate-feedback" id="gate-feedback">&nbsp;</p>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Jack</p>
-  </footer>
-
-  <script src="js/main.js"></script>
+  <script src="js/gate.js"></script>
 </body>
 </html>
