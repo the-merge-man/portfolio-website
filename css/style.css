@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+  }
+  
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #FEFBEA;
+    padding: 2rem;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+  
+  .hero h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #4a5568;
+    margin-top: 0.5rem;
+  }
+  
+  .tagline {
+    margin-top: 1.5rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #718096;
+  }
