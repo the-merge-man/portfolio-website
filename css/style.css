@@ -39,3 +39,20 @@
     font-size: 1.1rem;
     color: #718096;
   }
+
+  .about {
+    padding: 5rem 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    color: #2d2d2d;
+  }
